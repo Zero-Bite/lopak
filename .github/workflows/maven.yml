@@ -23,7 +23,7 @@ jobs:
         run: mvn -B package --file pom.xml
 
       - name: Check up Max Test
-        run: mvn -B clean test_max
+        run: mvn -B clean MaxTest
 
       - name: Check up Min Test
         run: mvn -B clean test_min
