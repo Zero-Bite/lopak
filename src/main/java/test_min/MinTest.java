@@ -1,4 +1,4 @@
-package test;
+package test_min;
 
 import org.example.Main;
 import org.junit.jupiter.api.Assertions;

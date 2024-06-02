@@ -1,4 +1,4 @@
-package test;
+package test_optoinal;
 
 import org.example.Main;
 import org.junit.Test;

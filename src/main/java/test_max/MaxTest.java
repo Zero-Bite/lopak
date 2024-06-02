@@ -1,12 +1,8 @@
-package test;
+package test_max;
 
 import org.example.Main;
-import org.junit.ClassRule;
-import org.junit.Rule;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.rules.ExternalResource;
-import org.junit.rules.Stopwatch;
 
 class MaxTest {
 

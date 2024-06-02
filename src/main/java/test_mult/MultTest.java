@@ -1,4 +1,4 @@
-package test;
+package test_mult;
 
 import org.example.Main;
 import org.junit.jupiter.api.Assertions;
