@@ -1,27 +1,26 @@
-package tests;
+package test;
 
 import org.example.Main;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class MultTest {
+class SumTest {
 
     Main main = new Main();
 
     @Test
-    void MultTest1(){
-        int result = main._mult("data1.txt");
+    void SumTest1(){
+        long result = main._sum("data1.txt");
 
-        Assertions.assertEquals(120, result);
-
+        Assertions.assertEquals(15, result);
     }
 
     @Test
-    void MultTestTime1() {
+    void SumTestTime1() {
 
         double startTime = System.nanoTime();
 
-        int result = main._mult("data1.txt");
+        long result = main._sum("data1.txt");
 
         double endTime = System.nanoTime();
         double timeSpend = (endTime - startTime) / Math.pow(10, 6);
@@ -32,42 +31,43 @@ class MultTest {
 
     }
 
-    @Test
-    void MultTest2(){
-        int result = main._mult("dataMulti.txt");
 
-        Assertions.assertEquals(19200, result);
+    @Test
+    void SumTest2(){
+        long result = main._sum("data2.txt");
+
+        Assertions.assertEquals(26185619, result);
     }
 
     @Test
-    void MultTestTime2() {
+    void SumTestTime2() {
 
         double startTime = System.nanoTime();
 
-        int result = main._mult("dataMulti.txt");
+        long result = main._sum("data2.txt");
 
         double endTime = System.nanoTime();
         double timeSpend = (endTime - startTime) / Math.pow(10, 6);
 
         System.out.println("Time for MaxTest1: " + timeSpend + " ms");
 
-        Assertions.assertTrue(timeSpend < 288);
+        Assertions.assertTrue(timeSpend < 400);
 
     }
 
     @Test
-    void MultTest3(){
-        int result = main._mult("data3.txt");
+    void SumTest3(){
+        long result = main._sum("data3.txt");
 
-        Assertions.assertEquals(0, result);
+        Assertions.assertEquals(503537967, result);
     }
 
     @Test
-    void MultTestTime3() {
+    void SumTestTime3() {
 
         double startTime = System.nanoTime();
 
-        int result = main._mult("data3.txt");
+        long result = main._sum("data3.txt");
 
         double endTime = System.nanoTime();
         double timeSpend = (endTime - startTime) / Math.pow(10, 6);

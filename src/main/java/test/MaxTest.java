@@ -1,4 +1,4 @@
-package tests;
+package test;
 
 import org.example.Main;
 import org.junit.ClassRule;
@@ -9,12 +9,6 @@ import org.junit.rules.ExternalResource;
 import org.junit.rules.Stopwatch;
 
 class MaxTest {
-
-    @ClassRule
-    public static ExternalResource summary = TimingRules.SUMMARY;
-
-    @Rule
-    public Stopwatch stopwatch = TimingRules.STOPWATCH;
 
     Main main = new Main();
 
