@@ -1,5 +1,6 @@
 name: Java Test
 
+
 on:
   push:
     branches: [ "master" ]
@@ -22,20 +23,8 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
 
-      - name: Check up Max Test
-        run: mvn -B test-compile MaxTest
-
-      - name: Check up Min Test
-        run: mvn -B process-test-classes test_min
-
-      - name: Check up Sum Test
-        run: mvn -B clean test_sum
-
-      - name: Check up Mult Test
-        run: mvn -B clean test_mult
-
-      - name: Check up Optional Test
-        run: mvn -B clean test_optoinal
+      - name: Personal Tests
+        run: mvn -B clean test
 
       - name: Send Telegram message on success
         if: ${{ always() }}

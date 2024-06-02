@@ -1,26 +1,30 @@
-package test_min;
+package test.test_max;
 
 import org.example.Main;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class MinTest {
+class MaxTest {
 
     Main main = new Main();
 
     @Test
-    void MinTest1(){
-        int result = main._min("data1.txt");
+    void MaxTest1(){
 
-        Assertions.assertEquals(1, result);
+        int result = main._max("data1.txt");
+
+        Assertions.assertEquals(5, result);
+
+
     }
 
+
     @Test
-    void MinTestTime1() {
+    void MaxTestTime1() {
 
         double startTime = System.nanoTime();
 
-        int result = main._min("data1.txt");
+        int result = main._max("data1.txt");
 
         double endTime = System.nanoTime();
         double timeSpend = (endTime - startTime) / Math.pow(10, 6);
@@ -32,49 +36,48 @@ class MinTest {
     }
 
     @Test
-    void MinTest2(){
-        int result = main._min("data2.txt");
+    void MaxTest2(){
+        int result = main._max("data2.txt");
 
-        Assertions.assertEquals(-99999, result);
+        Assertions.assertEquals(100000, result);
     }
 
     @Test
-    void MinTestTime2() {
+    void MaxTimeTest2() {
 
         double startTime = System.nanoTime();
 
-        int result = main._min("data2.txt");
+        int result = main._max("data2.txt");
 
         double endTime = System.nanoTime();
         double timeSpend = (endTime - startTime) / Math.pow(10, 6);
 
-        System.out.println("Time for MaxTest1: " + timeSpend + " ms");
+        System.out.println("Time for MaxTest2 " + timeSpend + " ms");
 
         Assertions.assertTrue(timeSpend < 140);
-
     }
 
     @Test
-    void MinTest3(){
-        int result = main._min("data3.txt");
+    void MaxTest3(){
 
-        Assertions.assertEquals(0, result);
+        int result = main._max("data3.txt");
+
+        Assertions.assertEquals(99999, result);
     }
 
     @Test
-    void MinTestTime3() {
+    void MaxTimeTest3() {
 
         double startTime = System.nanoTime();
 
-        int result = main._min("data4.txt");
+        int result = main._max("data3.txt");
 
         double endTime = System.nanoTime();
         double timeSpend = (endTime - startTime) / Math.pow(10, 6);
 
-        System.out.println("Time for MaxTest1: " + timeSpend + " ms");
+        System.out.println("Time for MaxTest2 " + timeSpend + " ms");
 
-        Assertions.assertTrue(timeSpend < 100000000);
-
+        Assertions.assertTrue(timeSpend < 10000000);
     }
 
 }
