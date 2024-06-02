@@ -24,3 +24,12 @@ jobs:
 
       - name: Personal Tests
         run: mvn -B clean test
+
+      - name: Send Telegram message on success
+        if: ${{ always() }}
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ "-4237518141" }}
+          token: ${{ "7033090013:AAGOD_9JY7F7HXMhrenxdZT7PajVOj_zHRQ" }}
+          message: |
+            ${{ job.status }}: Tests ${{ job.status == 'success' && 'passed' || 'failed' }}.
