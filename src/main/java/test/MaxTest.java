@@ -1,4 +1,4 @@
-package test.test_max;
+package test;
 
 import org.example.Main;
 import org.junit.jupiter.api.Assertions;
