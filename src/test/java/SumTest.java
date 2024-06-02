@@ -7,7 +7,7 @@ class SumTest {
 
     @Test
     void SumTest1(){
-        long result = main._sum("data1.txt");
+        long result = main._sum("src/data1.txt");
 
         Assertions.assertEquals(15, result);
     }
@@ -17,7 +17,7 @@ class SumTest {
 
         double startTime = System.nanoTime();
 
-        long result = main._sum("data1.txt");
+        long result = main._sum("src/data1.txt");
 
         double endTime = System.nanoTime();
         double timeSpend = (endTime - startTime) / Math.pow(10, 6);
@@ -31,7 +31,7 @@ class SumTest {
 
     @Test
     void SumTest2(){
-        long result = main._sum("data2.txt");
+        long result = main._sum("src/data2.txt");
 
         Assertions.assertEquals(26185619, result);
     }
@@ -41,7 +41,7 @@ class SumTest {
 
         double startTime = System.nanoTime();
 
-        long result = main._sum("data2.txt");
+        long result = main._sum("src/data2.txt");
 
         double endTime = System.nanoTime();
         double timeSpend = (endTime - startTime) / Math.pow(10, 6);
@@ -54,7 +54,7 @@ class SumTest {
 
     @Test
     void SumTest3(){
-        long result = main._sum("data3.txt");
+        long result = main._sum("src/data3.txt");
 
         Assertions.assertEquals(503537967, result);
     }
@@ -64,7 +64,7 @@ class SumTest {
 
         double startTime = System.nanoTime();
 
-        long result = main._sum("data3.txt");
+        long result = main._sum("src/data3.txt");
 
         double endTime = System.nanoTime();
         double timeSpend = (endTime - startTime) / Math.pow(10, 6);

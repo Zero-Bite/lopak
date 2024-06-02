@@ -7,7 +7,7 @@ class MinTest {
 
     @Test
     void MinTest1(){
-        int result = main._min("data1.txt");
+        int result = main._min("src/data1.txt");
 
         Assertions.assertEquals(1, result);
     }
@@ -17,7 +17,7 @@ class MinTest {
 
         double startTime = System.nanoTime();
 
-        int result = main._min("data1.txt");
+        int result = main._min("src/data1.txt");
 
         double endTime = System.nanoTime();
         double timeSpend = (endTime - startTime) / Math.pow(10, 6);
@@ -30,7 +30,7 @@ class MinTest {
 
     @Test
     void MinTest2(){
-        int result = main._min("data2.txt");
+        int result = main._min("src/data2.txt");
 
         Assertions.assertEquals(-99999, result);
     }
@@ -40,7 +40,7 @@ class MinTest {
 
         double startTime = System.nanoTime();
 
-        int result = main._min("data2.txt");
+        int result = main._min("src/data2.txt");
 
         double endTime = System.nanoTime();
         double timeSpend = (endTime - startTime) / Math.pow(10, 6);
@@ -53,7 +53,7 @@ class MinTest {
 
     @Test
     void MinTest3(){
-        int result = main._min("data3.txt");
+        int result = main._min("src/data3.txt");
 
         Assertions.assertEquals(0, result);
     }
@@ -63,7 +63,7 @@ class MinTest {
 
         double startTime = System.nanoTime();
 
-        int result = main._min("data4.txt");
+        int result = main._min("src/data4.txt");
 
         double endTime = System.nanoTime();
         double timeSpend = (endTime - startTime) / Math.pow(10, 6);

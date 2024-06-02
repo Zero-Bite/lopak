@@ -8,7 +8,7 @@ class TestMax {
     @Test
     void MaxTest1(){
 
-        int result = main._max("data1.txt");
+        int result = main._max("src/data1.txt");
 
         Assertions.assertEquals(5, result);
 
@@ -21,7 +21,7 @@ class TestMax {
 
         double startTime = System.nanoTime();
 
-        int result = main._max("data1.txt");
+        int result = main._max("src/data1.txt");
 
         double endTime = System.nanoTime();
         double timeSpend = (endTime - startTime) / Math.pow(10, 6);
@@ -34,7 +34,7 @@ class TestMax {
 
     @Test
     void MaxTest2(){
-        int result = main._max("data2.txt");
+        int result = main._max("src/data2.txt");
 
         Assertions.assertEquals(100000, result);
     }
@@ -44,7 +44,7 @@ class TestMax {
 
         double startTime = System.nanoTime();
 
-        int result = main._max("data2.txt");
+        int result = main._max("src/data2.txt");
 
         double endTime = System.nanoTime();
         double timeSpend = (endTime - startTime) / Math.pow(10, 6);
@@ -57,7 +57,7 @@ class TestMax {
     @Test
     void MaxTest3(){
 
-        int result = main._max("data3.txt");
+        int result = main._max("src/data3.txt");
 
         Assertions.assertEquals(99999, result);
     }
@@ -67,7 +67,7 @@ class TestMax {
 
         double startTime = System.nanoTime();
 
-        int result = main._max("data3.txt");
+        int result = main._max("src/data3.txt");
 
         double endTime = System.nanoTime();
         double timeSpend = (endTime - startTime) / Math.pow(10, 6);

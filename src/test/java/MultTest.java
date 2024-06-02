@@ -7,7 +7,7 @@ class MultTest {
 
     @Test
     void MultTest1(){
-        int result = main._mult("data1.txt");
+        int result = main._mult("src/data1.txt");
 
         Assertions.assertEquals(120, result);
 
@@ -18,7 +18,7 @@ class MultTest {
 
         double startTime = System.nanoTime();
 
-        int result = main._mult("data1.txt");
+        int result = main._mult("src/data1.txt");
 
         double endTime = System.nanoTime();
         double timeSpend = (endTime - startTime) / Math.pow(10, 6);
@@ -31,7 +31,7 @@ class MultTest {
 
     @Test
     void MultTest2(){
-        int result = main._mult("dataMulti.txt");
+        int result = main._mult("src/dataMulti.txt");
 
         Assertions.assertEquals(19200, result);
     }
@@ -41,7 +41,7 @@ class MultTest {
 
         double startTime = System.nanoTime();
 
-        int result = main._mult("dataMulti.txt");
+        int result = main._mult("src/dataMulti.txt");
 
         double endTime = System.nanoTime();
         double timeSpend = (endTime - startTime) / Math.pow(10, 6);
@@ -54,7 +54,7 @@ class MultTest {
 
     @Test
     void MultTest3(){
-        int result = main._mult("data3.txt");
+        int result = main._mult("src/data3.txt");
 
         Assertions.assertEquals(0, result);
     }
@@ -64,7 +64,7 @@ class MultTest {
 
         double startTime = System.nanoTime();
 
-        int result = main._mult("data3.txt");
+        int result = main._mult("src/data3.txt");
 
         double endTime = System.nanoTime();
         double timeSpend = (endTime - startTime) / Math.pow(10, 6);
