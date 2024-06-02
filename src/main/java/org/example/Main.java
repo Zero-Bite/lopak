@@ -1,21 +1,141 @@
 package org.example;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.util.Arrays;
+
+
 public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+    public static void main(String [] args) {
+        System.out.println("...Working in progress...");
     }
+
+    public static ArrayList<Integer> parser(String line) {
+
+        try {
+            ArrayList<Integer> result = new ArrayList<>();
+
+            String rep = "";
+
+            for (int index_of_line = 0; index_of_line < line.length(); index_of_line++) {
+                if (line.charAt(index_of_line) == ' ') {
+                    result.add(Integer.valueOf(rep));
+                    rep = "";
+                } else {
+                    rep += line.charAt(index_of_line);
+                }
+            }
+
+            result.add(Integer.valueOf(rep));
+
+            return result;
+        }
+
+        catch (Exception e) {
+            System.out.println(e);
+        }
+
+        ArrayList<Integer> result = new ArrayList<>(Arrays.asList(-1));
+        return result;
+    }
+
+    public static int _min(String pathToFile){
+//        int minNumber = (int) Math.pow(10, 9);
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(pathToFile));
+            String allNumbersFirst = reader.readLine();
+
+            ArrayList <Integer> arrayWithNumbers = parser(allNumbersFirst);
+
+            int minNumber = 1000000000;
+            int sizeOfArray = arrayWithNumbers.size();
+
+            for (int index = 0; index < sizeOfArray; index++) {
+                minNumber = Math.min(minNumber, arrayWithNumbers.get(index));
+            }
+
+            return minNumber;
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return -1;
+
+    }
+
+    //
+    public static int _max(String pathToFile) {
+
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(pathToFile));
+            String allNumbersFirst = reader.readLine();
+
+            ArrayList <Integer> arrayWithNumbers = parser(allNumbersFirst);
+
+            int minNumber = -1000000000;
+            int sizeOfArray = arrayWithNumbers.size();
+
+            for (int index = 0; index < sizeOfArray; index++) {
+                minNumber = Math.max(minNumber, arrayWithNumbers.get(index));
+            }
+
+            return minNumber;
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return -1;
+    }
+    //
+    public static long _sum(String pathToFile) {
+
+
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(pathToFile));
+            String allNumbersFirst = reader.readLine();
+
+            ArrayList <Integer> arrayWithNumbers = parser(allNumbersFirst);
+            long sum = 0;
+            int sizeOfArray = arrayWithNumbers.size();
+
+            for (int index = 0; index < sizeOfArray; index++) {
+                sum += arrayWithNumbers.get(index);
+            }
+
+            return sum;
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return -1;
+    }
+
+    public static int _mult(String pathToFile) {
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(pathToFile));
+            String allNumbersFirst = reader.readLine();
+
+            ArrayList<Integer> arrayWithNumbers = parser(allNumbersFirst);
+            int sum = 1;
+            int sizeOfArray = arrayWithNumbers.size();
+
+            for (int index = 0; index < sizeOfArray; index++) {
+                sum *= arrayWithNumbers.get(index);
+            }
+
+            return sum;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return -1;
+
+    }
+
 }
-
-
