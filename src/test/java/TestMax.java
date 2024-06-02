@@ -2,7 +2,7 @@ import org.example.Main;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class MaxTest {
+class TestMax {
 
     Main main = new Main();
 
